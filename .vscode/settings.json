@@ -1,3 +1,11 @@
 {
+<<<<<<< HEAD
     "C_Cpp.errorSquiggles": "disabled"
+=======
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.inlineSuggest.edits.allowCodeShifting": "always",
+    "editor.inlineSuggest.edits.renderSideBySide": "auto",
+    "editor.inlineSuggest.enabled": false,
+    "editor.acceptSuggestionOnCommitCharacter": true
+>>>>>>> 03e949b58b948bc4100a12016ab31e3ad305e60f
 }
