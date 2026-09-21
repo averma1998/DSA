@@ -2,20 +2,30 @@ class Solution {
 public:
     bool isValid(string s) {
         stack<char> st;
-        for (char ch : s) {
-            if (ch == '(' || ch == '[' || ch == '{') {
+        
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s[i];
+            
+            // Check for opening brackets
+            if (ch == '(' || ch == '{' || ch == '[') {
                 st.push(ch);
-            } else {
+            } 
+            // Handle closing brackets
+            else {
                 if (st.empty()) {
                     return false;
                 }
-                char top = st.top();
-                st.pop();
-                if (ch == ')' && top != '(') return false;
-                if (ch == ']' && top != '[') return false;
-                if (ch == '}' && top != '{') return false;
+                
+                if ((ch == ')' && st.top() == '(') ||
+                    (ch == '}' && st.top() == '{') ||
+                    (ch == ']' && st.top() == '[')) {
+                    st.pop();
+                } else {
+                    return false;
+                }
             }
         }
+        
         return st.empty();
     }
 };
