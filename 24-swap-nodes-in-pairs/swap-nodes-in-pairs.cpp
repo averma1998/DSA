@@ -25,7 +25,6 @@ public:
             // Swap the current pair
             second->next = first;
             first->next = third;
-            
             // Connect the previous pair to the newly swapped pair
             if(prev != NULL){
                 prev->next = second;
@@ -43,6 +42,5 @@ public:
              second = NULL;
         }
         return head;
-        
     }
 };
